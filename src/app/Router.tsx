@@ -6,16 +6,61 @@ import TrackingPage from "@/app/pages/TrackingPage";
 import TrainingPage from "@/app/pages/TrainingPage";
 import SettingsPage from "@/app/pages/SettingsPage";
 import NotFoundPage from "@/app/pages/NotFoundPage";
+import LoginPage from "@/app/pages/LoginPage";
+import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
 
 export function Router() {
   return (
     <Routes>
-      <Route path="/" element={<DashboardPage />} />
-      <Route path="/employees" element={<EmployeesPage />} />
-      <Route path="/kyc" element={<KYCPage />} />
-      <Route path="/tracking" element={<TrackingPage />} />
-      <Route path="/training" element={<TrainingPage />} />
-      <Route path="/settings" element={<SettingsPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route
+        path="/"
+        element={
+          <ProtectedRoute>
+            <DashboardPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/employees"
+        element={
+          <ProtectedRoute>
+            <EmployeesPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/kyc"
+        element={
+          <ProtectedRoute>
+            <KYCPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/tracking"
+        element={
+          <ProtectedRoute>
+            <TrackingPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/training"
+        element={
+          <ProtectedRoute>
+            <TrainingPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/settings"
+        element={
+          <ProtectedRoute>
+            <SettingsPage />
+          </ProtectedRoute>
+        }
+      />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
