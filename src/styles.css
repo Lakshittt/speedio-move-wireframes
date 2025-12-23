@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Speedio Move Brand Colors */
+    --speedio-blue: 234 73% 60%;
+    --speedio-blue-light: 218 95% 64%;
+    --speedio-blue-sky: 215 75% 68%;
+    --speedio-gold: 45 78% 64%;
+    --speedio-coral: 10 67% 61%;
+    --speedio-navy: 226 41% 52%;
+    --speedio-slate: 224 14% 22%;
+    --speedio-light: 240 7% 93%;
+
+    /* Base Theme */
+    --background: 240 7% 97%;
+    --foreground: 224 14% 22%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 14% 22%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 14% 22%;
+
+    --primary: 234 73% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 226 41% 52%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 7% 93%;
+    --muted-foreground: 224 10% 45%;
+
+    --accent: 45 78% 64%;
+    --accent-foreground: 224 14% 22%;
+
+    --destructive: 10 67% 61%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 7% 88%;
+    --input: 240 7% 88%;
+    --ring: 234 73% 60%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 224 14% 22%;
+    --sidebar-foreground: 240 7% 93%;
+    --sidebar-primary: 234 73% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 226 41% 32%;
+    --sidebar-accent-foreground: 240 7% 93%;
+    --sidebar-border: 224 14% 28%;
+    --sidebar-ring: 234 73% 60%;
+  }
+
+  .dark {
+    --background: 224 14% 12%;
+    --foreground: 240 7% 93%;
+
+    --card: 224 14% 16%;
+    --card-foreground: 240 7% 93%;
+
+    --popover: 224 14% 16%;
+    --popover-foreground: 240 7% 93%;
+
+    --primary: 234 73% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 226 41% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 224 14% 20%;
+    --muted-foreground: 240 7% 60%;
+
+    --accent: 45 78% 64%;
+    --accent-foreground: 224 14% 12%;
+
+    --destructive: 10 67% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 224 14% 24%;
+    --input: 224 14% 24%;
+    --ring: 234 73% 65%;
+
+    --sidebar-background: 224 14% 10%;
+    --sidebar-foreground: 240 7% 93%;
+    --sidebar-primary: 234 73% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 224 14% 18%;
+    --sidebar-accent-foreground: 240 7% 93%;
+    --sidebar-border: 224 14% 20%;
+    --sidebar-ring: 234 73% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50 shadow-lg;
+  }
+
+  .stat-card {
+    @apply glass-card rounded-xl p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5;
+  }
+
+  .status-badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+
+  .status-verified {
+    @apply bg-emerald-100 text-emerald-700;
+  }
+
+  .status-pending {
+    @apply bg-amber-100 text-amber-700;
+  }
+
+  .status-rejected {
+    @apply bg-red-100 text-red-700;
+  }
+
+  .status-active {
+    @apply bg-speedio-blue/10 text-speedio-blue;
+  }
+
+  .status-offline {
+    @apply bg-muted text-muted-foreground;
+  }
+
+  .nav-item {
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-sidebar-foreground/70 transition-all duration-200 hover:bg-sidebar-accent hover:text-sidebar-foreground;
+  }
+
+  .nav-item-active {
+    @apply bg-sidebar-primary text-sidebar-primary-foreground shadow-lg shadow-primary/25;
+  }
+
+  .btn-speedio {
+    @apply bg-primary text-primary-foreground px-6 py-2.5 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-gold {
+    @apply bg-accent text-accent-foreground px-6 py-2.5 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:shadow-accent/30;
+  }
+
+  .input-speedio {
+    @apply w-full px-4 py-2.5 bg-background border border-input rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all duration-200;
+  }
+
+  .table-row-hover {
+    @apply transition-colors duration-150 hover:bg-muted/50;
+  }
+
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/40;
+}
