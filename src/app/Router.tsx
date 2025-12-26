@@ -8,6 +8,7 @@ import SettingsPage from "@/app/pages/SettingsPage";
 import NotFoundPage from "@/app/pages/NotFoundPage";
 import LoginPage from "@/app/pages/LoginPage";
 import WireframePage from "@/components/wireframes/WireframePage";
+import PresentationPage from "@/components/wireframes/PresentationPage";
 import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
 
 export function Router() {
@@ -15,6 +16,7 @@ export function Router() {
     <Routes>
       <Route path="/login" element={<LoginPage />} />
       <Route path="/wireframes" element={<WireframePage />} />
+      <Route path="/presentation" element={<PresentationPage />} />
       <Route
         path="/"
         element={
