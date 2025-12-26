@@ -7,12 +7,14 @@ import TrainingPage from "@/app/pages/TrainingPage";
 import SettingsPage from "@/app/pages/SettingsPage";
 import NotFoundPage from "@/app/pages/NotFoundPage";
 import LoginPage from "@/app/pages/LoginPage";
+import WireframePage from "@/components/wireframes/WireframePage";
 import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
 
 export function Router() {
   return (
     <Routes>
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/wireframes" element={<WireframePage />} />
       <Route
         path="/"
         element={
