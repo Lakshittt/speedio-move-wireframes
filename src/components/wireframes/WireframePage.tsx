@@ -81,10 +81,12 @@ export default function WireframePage() {
     mobile: "max-w-sm mx-auto",
   };
 
+  const isIndividualScreen = activeWireframe !== null;
+
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className={`bg-gray-900 text-white ${isIndividualScreen ? 'h-screen flex flex-col' : 'min-h-screen'}`}>
       {/* Header */}
-      <header className="bg-gray-800 border-b border-gray-700 px-6 py-4">
+      <header className={`bg-gray-800 border-b border-gray-700 px-6 py-4 ${isIndividualScreen ? 'sticky top-0 z-10 flex-shrink-0' : ''}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Link
@@ -183,7 +185,7 @@ export default function WireframePage() {
       </header>
 
       {/* Content */}
-      <main className="p-6">
+      <main className={`p-6 ${isIndividualScreen ? 'flex-1 overflow-auto' : ''}`}>
         <div className={`${sizeStyles[viewSize]} space-y-8`}>
           {wireframes
             .filter((wf) => !activeWireframe || wf.id === activeWireframe)
@@ -196,7 +198,7 @@ export default function WireframePage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-800 border-t border-gray-700 px-6 py-4 mt-12">
+      <footer className={`bg-gray-800 border-t border-gray-700 px-6 py-4 ${isIndividualScreen ? 'sticky bottom-0 flex-shrink-0' : 'mt-12'}`}>
         <div className="text-center text-gray-400 text-sm">
           <p>Speedio Move Fleet Management Dashboard • Wireframe Documentation</p>
           <p className="mt-1">7 screens • Password protected access • Real-time data integration</p>
