@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { LoginWireframe } from "./screens/LoginWireframe";
 import { DashboardWireframe } from "./screens/DashboardWireframe";
 import { EmployeesWireframe } from "./screens/EmployeesWireframe";
@@ -5,7 +6,7 @@ import { KYCWireframe } from "./screens/KYCWireframe";
 import { TrackingWireframe } from "./screens/TrackingWireframe";
 import { TrainingWireframe } from "./screens/TrainingWireframe";
 import { SettingsWireframe } from "./screens/SettingsWireframe";
-import { Printer, Download } from "lucide-react";
+import { Printer, Home } from "lucide-react";
 
 const slides = [
   {
@@ -153,14 +154,23 @@ export default function PresentationPage() {
       {/* Header - Hidden when printing */}
       <header className="bg-gray-900 text-white px-6 py-4 print:hidden sticky top-0 z-50">
         <div className="flex items-center justify-between max-w-6xl mx-auto">
-          <div>
-            <h1 className="text-xl font-bold flex items-center gap-3">
-              <div className="w-6 h-6 bg-orange-500 rounded" />
-              Speedio Move - Presentation Export
-            </h1>
-            <p className="text-gray-400 text-sm">
-              {slides.length} slides ready for export
-            </p>
+          <div className="flex items-center gap-4">
+            <Link
+              to="/"
+              className="p-2 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors"
+              title="Back to Home"
+            >
+              <Home size={20} />
+            </Link>
+            <div>
+              <h1 className="text-xl font-bold flex items-center gap-3">
+                <div className="w-6 h-6 bg-orange-500 rounded" />
+                Speedio Move - Presentation Export
+              </h1>
+              <p className="text-gray-400 text-sm">
+                {slides.length} slides ready for export
+              </p>
+            </div>
           </div>
           <div className="flex gap-3">
             <button
