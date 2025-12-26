@@ -4,7 +4,7 @@ import { User, Bell, Shield, Palette, Globe, ExternalLink } from "lucide-react";
 
 export function SettingsWireframe() {
   return (
-    <div className="flex h-[500px] bg-gray-50">
+    <div className="flex h-full min-h-[400px] bg-gray-50">
       <WireframeSidebar activeItem="settings" />
       
       <div className="flex-1 flex flex-col">

@@ -2,7 +2,7 @@ import { Lock } from "lucide-react";
 
 export function LoginWireframe() {
   return (
-    <div className="min-h-[400px] bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center p-8">
+    <div className="h-full min-h-[400px] bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center p-8">
       <div className="bg-white/10 backdrop-blur rounded-xl p-8 w-full max-w-sm border border-gray-600">
         {/* Logo */}
         <div className="flex items-center justify-center gap-2 mb-6">

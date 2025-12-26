@@ -4,7 +4,7 @@ import { MapPin, Clock, Navigation } from "lucide-react";
 
 export function TrackingWireframe() {
   return (
-    <div className="flex h-[500px] bg-gray-50">
+    <div className="flex h-full min-h-[400px] bg-gray-50">
       <WireframeSidebar activeItem="tracking" />
       
       <div className="flex-1 flex flex-col">

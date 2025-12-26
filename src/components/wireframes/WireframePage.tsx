@@ -186,11 +186,16 @@ export default function WireframePage() {
 
       {/* Content */}
       <main className={`p-6 ${isIndividualScreen ? 'flex-1 overflow-auto' : ''}`}>
-        <div className={`${sizeStyles[viewSize]} space-y-8`}>
+        <div className={`${sizeStyles[viewSize]} ${isIndividualScreen ? 'h-full' : 'space-y-8'}`}>
           {wireframes
             .filter((wf) => !activeWireframe || wf.id === activeWireframe)
             .map((wf) => (
-              <WireframeContainer key={wf.id} title={wf.title}>
+              <WireframeContainer 
+                key={wf.id} 
+                title={wf.title}
+                viewSize={viewSize}
+                fillHeight={isIndividualScreen}
+              >
                 <wf.component />
               </WireframeContainer>
             ))}
