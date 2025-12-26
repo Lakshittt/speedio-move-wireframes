@@ -10,13 +10,62 @@ import { TrainingWireframe } from "./screens/TrainingWireframe";
 import { SettingsWireframe } from "./screens/SettingsWireframe";
 
 const wireframes = [
-  { id: "login", title: "1. Login Screen", component: LoginWireframe },
-  { id: "dashboard", title: "2. Dashboard", component: DashboardWireframe },
-  { id: "employees", title: "3. Employee Management", component: EmployeesWireframe },
-  { id: "kyc", title: "4. KYC Verification", component: KYCWireframe },
-  { id: "tracking", title: "5. Live Tracking", component: TrackingWireframe },
-  { id: "training", title: "6. Training Portal", component: TrainingWireframe },
-  { id: "settings", title: "7. Settings", component: SettingsWireframe },
+  { 
+    id: "login", 
+    title: "1. Login Screen", 
+    subtitle: "Secure Access Control",
+    description: "Password-protected dashboard with session-based authentication ensuring only authorized personnel can access fleet management tools.",
+    features: ["Single password authentication", "Session management", "Automatic logout", "Administrator contact info"],
+    component: LoginWireframe 
+  },
+  { 
+    id: "dashboard", 
+    title: "2. Dashboard", 
+    subtitle: "Fleet Operations Overview",
+    description: "Real-time KPIs and status indicators providing instant visibility into fleet performance and operational metrics.",
+    features: ["Fleet size and vehicle counts", "Active employee tracking", "Training completion rates", "KYC verification status", "Live location monitoring"],
+    component: DashboardWireframe 
+  },
+  { 
+    id: "employees", 
+    title: "3. Employee Management", 
+    subtitle: "Complete Staff Directory",
+    description: "Comprehensive employee database with advanced filtering, search capabilities, and detailed profile management.",
+    features: ["Searchable employee directory", "Role-based filtering", "Status indicators", "Contact information", "Profile management", "Bulk operations"],
+    component: EmployeesWireframe 
+  },
+  { 
+    id: "kyc", 
+    title: "4. KYC Verification", 
+    subtitle: "Document Compliance Tracking",
+    description: "Track and manage driver documentation including licenses, certifications, and compliance requirements.",
+    features: ["Document upload system", "Expiry tracking", "Verification status", "Compliance alerts", "Document history"],
+    component: KYCWireframe 
+  },
+  { 
+    id: "tracking", 
+    title: "5. Live Tracking", 
+    subtitle: "Real-Time Location Monitoring",
+    description: "GPS-based vehicle and driver tracking with live map visualization and trip history.",
+    features: ["Live map view", "Vehicle locations", "Driver status", "Route visualization", "Trip history", "Geofencing alerts"],
+    component: TrackingWireframe 
+  },
+  { 
+    id: "training", 
+    title: "6. Training Portal", 
+    subtitle: "Learning Management System",
+    description: "Assign, track, and manage driver training programs with progress monitoring and certification tracking.",
+    features: ["Course catalog", "Progress tracking", "Certification management", "Training assignments", "Completion reports"],
+    component: TrainingWireframe 
+  },
+  { 
+    id: "settings", 
+    title: "7. Settings", 
+    subtitle: "System Configuration",
+    description: "Customize application settings, manage user preferences, and configure system-wide options.",
+    features: ["User preferences", "Notification settings", "Security options", "Data export", "Integration settings"],
+    component: SettingsWireframe 
+  },
 ];
 
 type ViewSize = "desktop" | "tablet" | "mobile";
@@ -95,6 +144,32 @@ export default function WireframePage() {
             </button>
           ))}
         </div>
+
+        {/* Description Section */}
+        {activeWireframe && (
+          <div className="mt-4 bg-gray-800 rounded-lg p-4 border border-gray-700">
+            {wireframes
+              .filter((wf) => wf.id === activeWireframe)
+              .map((wf) => (
+                <div key={wf.id}>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-orange-500 font-semibold">{wf.subtitle}</span>
+                  </div>
+                  <p className="text-gray-300 text-sm mb-3">{wf.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {wf.features.map((feature, idx) => (
+                      <span 
+                        key={idx} 
+                        className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded-full"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+          </div>
+        )}
       </header>
 
       {/* Content */}
