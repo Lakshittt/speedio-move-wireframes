@@ -4,7 +4,7 @@ import { GraduationCap, BookOpen, Award, Clock } from "lucide-react";
 
 export function TrainingWireframe() {
   return (
-    <div className="flex h-[500px] bg-gray-50">
+    <div className="flex h-full min-h-[400px] bg-gray-50">
       <WireframeSidebar activeItem="training" />
       
       <div className="flex-1 flex flex-col">

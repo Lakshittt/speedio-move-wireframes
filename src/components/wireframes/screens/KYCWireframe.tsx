@@ -4,7 +4,7 @@ import { CheckCircle, Clock, AlertTriangle, XCircle } from "lucide-react";
 
 export function KYCWireframe() {
   return (
-    <div className="flex h-[500px] bg-gray-50">
+    <div className="flex h-full min-h-[400px] bg-gray-50">
       <WireframeSidebar activeItem="kyc" />
       
       <div className="flex-1 flex flex-col">

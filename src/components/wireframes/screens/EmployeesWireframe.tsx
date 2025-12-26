@@ -4,7 +4,7 @@ import { Search, Filter, ChevronLeft, ChevronRight } from "lucide-react";
 
 export function EmployeesWireframe() {
   return (
-    <div className="flex h-[500px] bg-gray-50">
+    <div className="flex h-full min-h-[400px] bg-gray-50">
       <WireframeSidebar activeItem="employees" />
       
       <div className="flex-1 flex flex-col">
