@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Monitor, Tablet, Smartphone } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Monitor, Tablet, Smartphone, Home } from "lucide-react";
 import { WireframeContainer } from "./WireframeContainer";
 import { LoginWireframe } from "./screens/LoginWireframe";
 import { DashboardWireframe } from "./screens/DashboardWireframe";
@@ -85,14 +86,23 @@ export default function WireframePage() {
       {/* Header */}
       <header className="bg-gray-800 border-b border-gray-700 px-6 py-4">
         <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-bold flex items-center gap-3">
-              <div className="w-8 h-8 bg-orange-500 rounded-lg" />
-              Speedio Move - Wireframes
-            </h1>
-            <p className="text-gray-400 text-sm mt-1">
-              Static mockup components for presentation
-            </p>
+          <div className="flex items-center gap-4">
+            <Link
+              to="/"
+              className="p-2 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors"
+              title="Back to Home"
+            >
+              <Home size={20} />
+            </Link>
+            <div>
+              <h1 className="text-2xl font-bold flex items-center gap-3">
+                <div className="w-8 h-8 bg-orange-500 rounded-lg" />
+                Speedio Move - Wireframes
+              </h1>
+              <p className="text-gray-400 text-sm mt-1">
+                Static mockup components for presentation
+              </p>
+            </div>
           </div>
 
           {/* View Size Toggle */}
