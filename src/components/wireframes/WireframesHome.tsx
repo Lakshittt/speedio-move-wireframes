@@ -102,7 +102,7 @@ export default function WireframesHome() {
             </div>
 
             {/* Right Content - Platform Cards */}
-            <div className="flex flex-col sm:flex-row lg:flex-col gap-4 lg:w-80">
+            <div className="flex flex-col sm:flex-row gap-4 lg:w-auto">
               {/* Admin Dashboard Card */}
               <Link
                 to="/screens"
