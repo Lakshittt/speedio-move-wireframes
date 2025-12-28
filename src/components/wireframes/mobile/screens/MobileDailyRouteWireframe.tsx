@@ -1,7 +1,7 @@
 import { MapPin, Navigation, Clock, AlertCircle, CheckCircle2, Circle } from "lucide-react";
-import { MobileStatusBar } from "../MobileStatusBar";
-import { MobileHeader } from "../MobileHeader";
-import { MobileBottomNav } from "../MobileBottomNav";
+import { MobileStatusBar } from "../components/MobileStatusBar";
+import { MobileHeader } from "../components/MobileHeader";
+import { MobileBottomNav } from "../components/MobileBottomNav";
 
 const routeStops = [
   { id: 1, address: "123 MG Road, Sector 5", time: "9:00 AM", status: "completed" },

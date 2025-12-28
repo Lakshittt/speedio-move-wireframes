@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Monitor, Tablet, Smartphone, Home } from "lucide-react";
+import { Home } from "lucide-react";
 import { WireframeContainer } from "./WireframeContainer";
 import { LoginWireframe } from "./screens/LoginWireframe";
 import { DashboardWireframe } from "./screens/DashboardWireframe";
