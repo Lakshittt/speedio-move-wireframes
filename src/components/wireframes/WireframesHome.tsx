@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import {
   Monitor,
-  Presentation,
   ArrowRight,
   Users,
   FileCheck,
@@ -101,40 +100,6 @@ export default function WireframesHome() {
           ))}
         </div>
       </section>
-
-      {/* Features Grid
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-gray-800">
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
-            <Monitor className="text-orange-500 mb-4" size={36} />
-            <h3 className="text-xl font-bold mb-3">Interactive Wireframes</h3>
-            <p className="text-gray-400 mb-4">
-              Browse all 7 application screens with responsive preview options.
-              Switch between desktop, tablet, and mobile views.
-            </p>
-            <Link
-              to="/screens"
-              className="text-orange-500 hover:text-orange-400 inline-flex items-center gap-2"
-            >
-              View Wireframes <ArrowRight size={16} />
-            </Link>
-          </div>
-          <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
-            <Presentation className="text-orange-500 mb-4" size={36} />
-            <h3 className="text-xl font-bold mb-3">Presentation Export</h3>
-            <p className="text-gray-400 mb-4">
-              Export-ready slides with feature breakdowns and wireframe
-              screenshots. Print or save as PDF for stakeholder presentations.
-            </p>
-            <Link
-              to="/presentation"
-              className="text-orange-500 hover:text-orange-400 inline-flex items-center gap-2"
-            >
-              View Presentation <ArrowRight size={16} />
-            </Link>
-          </div>
-        </div>
-      </section> */}
 
       {/* Footer */}
       <footer className="bg-gray-800 border-t border-gray-700 px-6 py-6 mt-auto">
