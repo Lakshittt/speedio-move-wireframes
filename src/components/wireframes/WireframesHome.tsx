@@ -10,6 +10,7 @@ import {
   Settings,
   LayoutDashboard,
   LogIn,
+  Smartphone,
 } from "lucide-react";
 
 const modules = [
@@ -62,17 +63,17 @@ export default function WireframesHome() {
               className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-xl font-semibold transition-colors"
             >
               <Monitor size={20} />
-              Interactive Wireframes
+              Admin Dashboard
               <ArrowRight size={18} />
             </Link>
-            {/* <Link
-              to="/presentation"
+            <Link
+              to="/mobile-app"
               className="inline-flex items-center gap-3 bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-xl font-semibold transition-colors"
             >
-              <Presentation size={20} />
-              Presentation Export
+              <Smartphone size={20} />
+              Employee Mobile App
               <ArrowRight size={18} />
-            </Link> */}
+            </Link>
           </div>
 
           <div>
