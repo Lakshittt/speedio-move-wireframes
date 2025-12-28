@@ -18,11 +18,23 @@ import {
 
 const adminModules = [
   { icon: LogIn, title: "Login", description: "Secure access control" },
-  { icon: LayoutDashboard, title: "Dashboard", description: "Fleet operations overview" },
-  { icon: Users, title: "Employees", description: "Staff directory management" },
+  {
+    icon: LayoutDashboard,
+    title: "Dashboard",
+    description: "Fleet operations overview",
+  },
+  {
+    icon: Users,
+    title: "Employees",
+    description: "Staff directory management",
+  },
   { icon: FileCheck, title: "KYC", description: "Document compliance" },
   { icon: MapPin, title: "Tracking", description: "Real-time location" },
-  { icon: GraduationCap, title: "Training", description: "Learning management" },
+  {
+    icon: GraduationCap,
+    title: "Training",
+    description: "Learning management",
+  },
   { icon: Settings, title: "Settings", description: "System configuration" },
 ];
 
@@ -36,16 +48,16 @@ const mobileModules = [
 
 export default function WireframesHome() {
   return (
-    <div className="min-h-screen bg-gray-950 text-white">
+    <div className="min-h-screen bg-gray-950 text-white flex flex-col">
       {/* Hero Section */}
-      <header className="relative overflow-hidden border-b border-gray-800">
+      <header className="sticky top-0 z-50 overflow-hidden border-b border-gray-800 bg-gray-950">
         {/* Background Effects */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-orange-600/5 rounded-full blur-3xl" />
         </div>
-        
-        <div className="relative max-w-6xl mx-auto px-6 py-16 lg:py-24">
+
+        <div className="relative max-w-6xl mx-auto px-6 sm:py-10 lg:py-24">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
             {/* Left Content */}
             <div className="flex-1 max-w-xl">
@@ -55,14 +67,19 @@ export default function WireframesHome() {
                   <Layers size={28} className="text-white" />
                 </div>
                 <div>
-                  <h1 className="text-3xl lg:text-4xl font-bold tracking-tight">Speedio Move</h1>
-                  <p className="text-orange-400 font-medium text-sm">Fleet Management Platform</p>
+                  <h1 className="text-3xl lg:text-4xl font-bold tracking-tight">
+                    Speedio Move
+                  </h1>
+                  <p className="text-orange-400 font-medium text-sm">
+                    Fleet Management Platform
+                  </p>
                 </div>
               </div>
 
               {/* Tagline */}
               <p className="text-lg lg:text-xl text-gray-300 mb-8 leading-relaxed">
-                Comprehensive wireframe documentation for employee management and fleet operations.
+                Comprehensive wireframe documentation for employee management
+                and fleet operations.
               </p>
 
               {/* Stats */}
@@ -95,10 +112,15 @@ export default function WireframesHome() {
                   <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center">
                     <Monitor size={24} className="text-orange-500" />
                   </div>
-                  <ArrowRight size={20} className="text-gray-500 group-hover:text-orange-500 group-hover:translate-x-1 transition-all" />
+                  <ArrowRight
+                    size={20}
+                    className="text-gray-500 group-hover:text-orange-500 group-hover:translate-x-1 transition-all"
+                  />
                 </div>
                 <h3 className="text-lg font-semibold mb-1">Admin Dashboard</h3>
-                <p className="text-gray-400 text-sm">7 screens • Desktop view</p>
+                <p className="text-gray-400 text-sm">
+                  7 screens • Desktop view
+                </p>
               </Link>
 
               {/* Mobile App Card */}
@@ -110,9 +132,14 @@ export default function WireframesHome() {
                   <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center">
                     <Smartphone size={24} className="text-orange-500" />
                   </div>
-                  <ArrowRight size={20} className="text-gray-500 group-hover:text-orange-500 group-hover:translate-x-1 transition-all" />
+                  <ArrowRight
+                    size={20}
+                    className="text-gray-500 group-hover:text-orange-500 group-hover:translate-x-1 transition-all"
+                  />
                 </div>
-                <h3 className="text-lg font-semibold mb-1">Employee Mobile App</h3>
+                <h3 className="text-lg font-semibold mb-1">
+                  Employee Mobile App
+                </h3>
                 <p className="text-gray-400 text-sm">5 screens • Mobile view</p>
               </Link>
             </div>
@@ -130,10 +157,12 @@ export default function WireframesHome() {
             </div>
             <div>
               <h2 className="text-xl font-bold">Admin Dashboard</h2>
-              <p className="text-gray-500 text-sm">Web application for fleet managers</p>
+              <p className="text-gray-500 text-sm">
+                Web application for fleet managers
+              </p>
             </div>
           </div>
-          
+
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3">
             {adminModules.map((module, index) => (
               <div
@@ -141,7 +170,10 @@ export default function WireframesHome() {
                 className="group bg-gray-900 rounded-xl p-4 border border-gray-800 hover:border-gray-700 transition-colors"
               >
                 <div className="w-9 h-9 bg-gray-800 group-hover:bg-orange-500/10 rounded-lg flex items-center justify-center mb-3 transition-colors">
-                  <module.icon size={18} className="text-gray-400 group-hover:text-orange-500 transition-colors" />
+                  <module.icon
+                    size={18}
+                    className="text-gray-400 group-hover:text-orange-500 transition-colors"
+                  />
                 </div>
                 <h3 className="font-medium text-sm mb-0.5">{module.title}</h3>
                 <p className="text-gray-500 text-xs">{module.description}</p>
@@ -158,10 +190,12 @@ export default function WireframesHome() {
             </div>
             <div>
               <h2 className="text-xl font-bold">Employee Mobile App</h2>
-              <p className="text-gray-500 text-sm">Mobile application for delivery employees</p>
+              <p className="text-gray-500 text-sm">
+                Mobile application for delivery employees
+              </p>
             </div>
           </div>
-          
+
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
             {mobileModules.map((module) => (
               <div
@@ -169,7 +203,10 @@ export default function WireframesHome() {
                 className="group bg-gray-900 rounded-xl p-4 border border-gray-800 hover:border-gray-700 transition-colors"
               >
                 <div className="w-9 h-9 bg-gray-800 group-hover:bg-orange-500/10 rounded-lg flex items-center justify-center mb-3 transition-colors">
-                  <module.icon size={18} className="text-gray-400 group-hover:text-orange-500 transition-colors" />
+                  <module.icon
+                    size={18}
+                    className="text-gray-400 group-hover:text-orange-500 transition-colors"
+                  />
                 </div>
                 <h3 className="font-medium text-sm mb-0.5">{module.title}</h3>
                 <p className="text-gray-500 text-xs">{module.description}</p>
@@ -180,7 +217,7 @@ export default function WireframesHome() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-gray-800 px-6 py-8 mt-auto">
+      <footer className="sticky bottom-0 z-50 border-t border-gray-800 px-6 py-8 mt-auto bg-gray-950">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
