@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import { MobilePhoneFrame } from "./mobile/MobilePhoneFrame";
-import { 
-  MobileLoginWireframe,
-  MobileHomeWireframe,
-  MobileDailyRouteWireframe,
-  MobileTrainingWireframe,
-  MobileProfileWireframe
-} from "./mobile";
+import { MobilePhoneFrame } from "./components/MobilePhoneFrame";
+import { MobileLoginWireframe } from "./screens/MobileLoginWireframe";
+import { MobileHomeWireframe } from "./screens/MobileHomeWireframe";
+import { MobileDailyRouteWireframe } from "./screens/MobileDailyRouteWireframe";
+import { MobileTrainingWireframe } from "./screens/MobileTrainingWireframe";
+import { MobileProfileWireframe } from "./screens/MobileProfileWireframe";
 
 type MobileScreen = "login" | "home" | "route" | "training" | "profile";
 
@@ -20,7 +18,7 @@ const mobileScreens: { id: MobileScreen; title: string; description: string }[] 
   { id: "profile", title: "Profile", description: "KYC status, vehicle data, settings, and logout" },
 ];
 
-export function MobileWireframePage() {
+export default function MobileWireframePage() {
   const [activeScreen, setActiveScreen] = useState<MobileScreen>("login");
 
   const renderScreen = () => {

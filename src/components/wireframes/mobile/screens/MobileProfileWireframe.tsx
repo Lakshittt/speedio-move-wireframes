@@ -8,9 +8,9 @@ import {
   CheckCircle2,
   Camera
 } from "lucide-react";
-import { MobileStatusBar } from "../MobileStatusBar";
-import { MobileHeader } from "../MobileHeader";
-import { MobileBottomNav } from "../MobileBottomNav";
+import { MobileStatusBar } from "../components/MobileStatusBar";
+import { MobileHeader } from "../components/MobileHeader";
+import { MobileBottomNav } from "../components/MobileBottomNav";
 
 export function MobileProfileWireframe() {
   return (

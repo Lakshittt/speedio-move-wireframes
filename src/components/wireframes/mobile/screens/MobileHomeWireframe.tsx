@@ -1,7 +1,7 @@
 import { AlertTriangle, GraduationCap, Megaphone, ChevronRight } from "lucide-react";
-import { MobileStatusBar } from "../MobileStatusBar";
-import { MobileHeader } from "../MobileHeader";
-import { MobileBottomNav } from "../MobileBottomNav";
+import { MobileStatusBar } from "../components/MobileStatusBar";
+import { MobileHeader } from "../components/MobileHeader";
+import { MobileBottomNav } from "../components/MobileBottomNav";
 
 export function MobileHomeWireframe() {
   return (

@@ -1,5 +1,5 @@
 import { Lock, Mail, Eye } from "lucide-react";
-import { MobileStatusBar } from "../MobileStatusBar";
+import { MobileStatusBar } from "../components/MobileStatusBar";
 
 export function MobileLoginWireframe() {
   return (

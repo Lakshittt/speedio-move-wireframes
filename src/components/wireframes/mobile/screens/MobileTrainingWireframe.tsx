@@ -1,7 +1,7 @@
 import { Play, CheckCircle2, Lock, Clock } from "lucide-react";
-import { MobileStatusBar } from "../MobileStatusBar";
-import { MobileHeader } from "../MobileHeader";
-import { MobileBottomNav } from "../MobileBottomNav";
+import { MobileStatusBar } from "../components/MobileStatusBar";
+import { MobileHeader } from "../components/MobileHeader";
+import { MobileBottomNav } from "../components/MobileBottomNav";
 
 const trainingModules = [
   { id: 1, title: "Safety Guidelines", duration: "15 min", progress: 100, status: "completed" },
