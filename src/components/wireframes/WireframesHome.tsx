@@ -57,7 +57,7 @@ export default function WireframesHome() {
           <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-orange-600/5 rounded-full blur-3xl" />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-6 sm:py-10 lg:py-24">
+        <div className="relative max-w-6xl mx-auto px-6 py-6 sm:py-8 lg:py-12">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
             {/* Left Content */}
             <div className="flex-1 max-w-xl">
